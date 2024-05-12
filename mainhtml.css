@@ -1,0 +1,196 @@
+html,body{
+    height: 100%;   
+    margin: 0; 
+    padding: 0;  
+    overflow-x: hidden;  
+}
+div.moneyImg img{
+    max-width:100%;
+    max-height:100%;
+}
+div.money{
+width: 100%;
+height: 15%;
+position: absolute;
+display: table;
+}
+div.moneyImg{
+    width: 25%;
+    height: 25%;
+    display: table-cell; 
+}
+div.point{
+text-align:center; 
+vertical-align: middle;
+display: table-cell; 
+color: black;
+font-size: 300%;
+}
+div.quanity-click{
+background-color: blue;
+width: 100%;
+height: 5%;
+position: absolute; 
+bottom: 16%;
+}
+div.buttonBox{
+background-color: red;
+width: 100%;
+height: 15%;
+position: absolute; 
+bottom: 0;
+display: inline-flex;
+}
+div.boostButton{
+    background-color: brown;
+    width: 25%;
+    height: 100%;
+}
+button{
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline:none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 300px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+div.statsButton{
+    background-color: green;
+    width: 25%;
+    height: 100%;
+}
+div.earnButton{
+    background-color: purple;
+    width: 25%;
+    height: 100%;
+}
+div.inviteButton{
+    background-color: gold;
+    width: 25%;
+    height: 100%;
+}
+div.moneyCircleDiv{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+}
+.btn {
+    background: none;
+    outline:none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 300px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  .btn:hover {
+    top: 2px;
+  }
+  
+  .btn:active {
+    box-shadow: none;
+    top: 6px;
+  }
+div.moneyCircleDiv img{
+    max-width:100%;
+    max-height:100%;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Модальный (фон) */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Сидеть на вершине */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включите прокрутку, если это необходимо */
+  background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+  background-color: rgba(0,0,0,0.4); /*Черный с непрозрачностью */
+  -webkit-animation-name: fadeIn; /* Исчезают в фоновом режиме */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Модальное содержание */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  height: 80%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* Кнопка закрытия */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: black;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+/* Добавить анимацию */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
