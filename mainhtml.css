@@ -4,6 +4,10 @@ html,body{
     padding: 0;  
     overflow-x: hidden;  
 }
+:root {
+  touch-action: pan-x pan-y;
+  height: auto
+}
 div.moneyImg img{
     max-width:100%;
     max-height:100%;
