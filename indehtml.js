@@ -51,15 +51,7 @@ function asd(){
   click -= priceAutoClick;
   document.querySelector(".point").textContent = click++;
 }
-let test = false;
 function buyAutoClick(){
-  console.log("test");
-  if(click >= priceAutoClick){
-    test = true;
-  }
-}
-if(!test){
-  setInterval(asd,1000);
 }
 // Get the modal
 var modal = document.getElementById("myModal");
