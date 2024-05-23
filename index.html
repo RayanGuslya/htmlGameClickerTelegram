@@ -22,7 +22,7 @@
         </button>
     </div>
     <div class="quanity-click">
-        <p>5000</p>
+        <p class="energyLimit">1500</p>
     </div>
     <div class="buttonBox">
         <div class="boostButton">
@@ -52,9 +52,9 @@
             <div class="imgclickBoost">
             <img src="assets/clickBoost.png"><img>
             </div>
-            <button class="buyClickBoost">Купить</button>
+            <button class="buyClickBoost" onclick="buyClickBoostFunc()">Купить <br><div class="priceBoost">за 250</div></br></button>
             <div class="textClickBoost">
-                <p>Увеличивает удар по рублю</p>
+                <p>Увеличивает удар по рублю +1</p>
             </div>
             <div>
       </div>
@@ -63,9 +63,9 @@
         <div class="imgEnergyBoost">
             <img src="assets/energyBoost.png"><img>
         </div>
-        <button class="buyEnergyBoost">Купить</button>
+        <button class="buyEnergyBoost" onclick="buyClickEnergyFunc()">Купить <br><div class="priceEnergy">за 500</div></br></button>
         <div class="textEnergyBoost">
-            <p>Увеличивает энергию ударов</p>
+            <p>Увеличивает энергию ударов +500</p>
         </div>
     </div>      
 
@@ -73,12 +73,14 @@
         <div class="imgAutoClick"> 
             <img src="assets/autoClick.png"><img>
         </div>
-        <button class="buyAutoClick">Купить</button>
+        <button class="buyAutoClick" onclick="buyAutoClick()">Купить <br>за 50000</br></button>
         <div class="textAutoClick">
             <p>Бьет рубль пока ты спишь</p>
         </div>
     </div>
     <script src="indehtml.js"></script>
+  </div>
+  </div>
   </div>
 </body>
 </html>
