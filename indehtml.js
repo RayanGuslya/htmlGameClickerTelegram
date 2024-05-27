@@ -1,9 +1,8 @@
-let click = 50000;
+let click = 100000;
 let clickCoins = 1;
 let maxEnergy = 1500;
 let priceBoostClick = 250;
 let priceBoostEnergy = 500;
-let priceAutoClick = 50000;
 let restart = true;
 //востановление энергии
 function energyHill() {
@@ -18,8 +17,8 @@ function energyHill() {
 }
 //отнимает энергия при нажатии на коин
 function clickCoin() {
-  let energyLimitElement = document.querySelector(".energyLimit");
 
+  let energyLimitElement = document.querySelector(".energyLimit");
   if (parseInt(energyLimitElement.textContent) >= 2) {
     click += clickCoins;
     document.querySelector(".point").textContent = click;
@@ -31,27 +30,32 @@ function buyClickBoostFunc(){
   if(click >= priceBoostClick){
     clickCoins++;
     click-=priceBoostClick;
-    document.querySelector(".point").textContent = click;
     priceBoostClick *= 4;
+
+    document.querySelector(".point").textContent = click;
     document.querySelector(".priceBoost").textContent = "за " + priceBoostClick;
   }
 }
 function buyClickEnergyFunc(){
   let energyLimitElement = document.querySelector(".energyLimit");
   if(click >= priceBoostEnergy){
-    priceBoostEnergy *= 2;
     maxEnergy +=500;
-    click -= priceBoostEnergy;
+    click -= priceBoostEnergy; 
+    priceBoostEnergy *= 2;
+    
     energyLimitElement.textContent = maxEnergy;
     document.querySelector(".point").textContent = click;
     document.querySelector(".priceEnergy").textContent = "за " + priceBoostEnergy;
   }
 }
-function asd(){
-  click -= priceAutoClick;
-  document.querySelector(".point").textContent = click++;
-}
 function buyAutoClick(){
+  const btn = document.querySelector(".buyAutoClick");
+  btn.setAttribute('disabled','');
+  btn.textContent = 'Куплено';
+  if(click >= 50000){
+    click-=50000;
+    document.querySelector(".point").textContent = click;
+  }
 }
 // Get the modal
 var modal = document.getElementById("myModal");

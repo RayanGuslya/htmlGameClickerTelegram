@@ -256,6 +256,36 @@ div.clickBoost button{
   margin-left: 30%;
   margin-top: -3.5em;
 }
+.tapCoin {
+  position: absolute;
+  margin-top:25%;
+  margin-left:50%;
+  animation: 1s;
+  -webkit-animation: move 1.5s;
+}
+@keyframes move {
+  from {
+    margin-top: 30%;
+    width: 15%; 
+  }
+
+  to {
+    margin-left: 50%;
+    width: 20%;
+  }
+}
+            
+@-webkit-keyframes move {
+  from {
+    margin-top: 30%;
+    width: 15%; 
+  }
+
+  to {
+    margin-left: 50%;
+    width: 20%;
+  }
+}
 /* Добавить анимацию */
 @-webkit-keyframes slideIn {
   from {bottom: -300px; opacity: 0} 
