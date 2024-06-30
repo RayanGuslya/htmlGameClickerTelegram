@@ -17,7 +17,6 @@ function energyHill() {
 }
 //отнимает энергия при нажатии на коин
 function clickCoin() {
-
   let energyLimitElement = document.querySelector(".energyLimit");
   if (parseInt(energyLimitElement.textContent) >= 2) {
     click += clickCoins;
@@ -49,14 +48,20 @@ function buyClickEnergyFunc(){
   }
 }
 function buyAutoClick(){
-  const btn = document.querySelector(".buyAutoClick");
-  btn.setAttribute('disabled','');
-  btn.textContent = 'Куплено';
   if(click >= 50000){
+    const btn = document.querySelector(".buyAutoClick");
+    btn.setAttribute('disabled','');
+    btn.textContent = 'Куплено';
     click-=50000;
     document.querySelector(".point").textContent = click;
+    setInterval(autoClick, 4000)
   }
 }
+function autoClick(){
+  click += 2;
+  document.querySelector(".point").textContent = click;
+}
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
