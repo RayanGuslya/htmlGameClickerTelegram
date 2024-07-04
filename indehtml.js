@@ -5,13 +5,13 @@ let priceBoostClick = 250;
 let priceBoostEnergy = 500;
 let restart = true;
 document.querySelectorAll('.btn').forEach(function(button) {
-  button.addEventListener('touchstart', function() {
-      button.classList.add('active');
-  });
+    button.addEventListener('touchstart', function() {
+        button.classList.add('active');
+    });
 
-  button.addEventListener('touchend', function() {
-      button.classList.remove('active');
-  });
+    button.addEventListener('touchend', function() {
+        button.classList.remove('active');
+    });
 });
 //востановление энергии
 function energyHill() {
@@ -71,29 +71,51 @@ function autoClick(){
   document.querySelector(".point").textContent = click;
 }
 
-// Get the modal
-var modal = document.getElementById("myModal");
+    // Get the modal elements
+    var modal = document.getElementById("myModal");
+    var modalStats = document.getElementById("myStatsModal");
+    var modalEarn = document.getElementById("myEarnModal");
+    var modalInvite = document.getElementById("myInviteModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtnStore");
+    // Get the buttons that open the modals
+    var btn = document.getElementById("myBtnStore");
+    var btnStats = document.getElementById("myBtnStats");
+    var btnEarn = document.getElementById("myBtnEarn");
+    var btnInvite = document.getElementById("myBtnInvite");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close");
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    btnStats.onclick = function() {
+        modalStats.style.display = "block";
+    }
+    btnEarn.onclick = function() {
+        modalEarn.style.display = "block";
+    }
+    btnInvite.onclick = function() {
+        modalInvite.style.display = "block";
+    }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // When the user clicks on <span> (x), close the modal
+    for (let i = 0; i < span.length; i++) {
+        span[i].onclick = function() {
+            modal.style.display = "none";
+            modalStats.style.display = "none";
+            modalEarn.style.display = "none";
+            modalInvite.style.display = "none";
+        }
+    }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal || event.target == modalStats || event.target == modalEarn || event.target == modalInvite) {
+            modal.style.display = "none";
+            modalStats.style.display = "none";
+            modalEarn.style.display = "none";
+            modalInvite.style.display = "none";
+        }
+    };

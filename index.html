@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" >
-    <meta name="apple-mobile-web-app-capable" content="yes" >
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="mainhtml.css">
     <title>Document</title>
 </head>
@@ -26,61 +26,100 @@
     </div>
     <div class="buttonBox">
         <div class="boostButton">
-            <button id="myBtnStore"></button>
+            <button id="myBtnStore">Store</button>
         </div>
         <div class="statsButton">
-            <button id="btnBox"></button>
+            <button id="myBtnStats">Stats</button>
         </div>
         <div class="earnButton">
-            <button id="btnBox"></button>
+            <button id="myBtnEarn">Earn</button>
         </div>
         <div class="inviteButton">
-            <button id="btnBox"></button>
+            <button id="myBtnInvite">Invite</button>
         </div>
     </div>
-    <!-- Модальном окно -->
+
+    <!-- Modal for Store button -->
     <div id="myModal" class="modal">
-
-    <!-- Модальное содержание -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-        <h2>Магазин</h2>
-      </div>
-      <div class="modal-body">
-        <div class="clickBoost">
-            <div class="imgclickBoost">
-            <img src="assets/clickBoost.png"><img>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Магазин</h2>
             </div>
-            <button class="buyClickBoost" onclick="buyClickBoostFunc()">Купить <br><div class="priceBoost">за 250</div></br></button>
-            <div class="textClickBoost">
-                <p>Увеличивает удар по рублю +1</p>
+            <div class="modal-body">
+                <div class="clickBoost">
+                    <div class="imgclickBoost">
+                    <img src="assets/clickBoost.png"><img>
+                    </div>
+                    <button class="buyClickBoost" onclick="buyClickBoostFunc()">Купить <br><div class="priceBoost">за 250</div></br></button>
+                    <div class="textClickBoost">
+                        <p>Увеличивает удар по рублю +1</p>
+                    </div>
+                    <div>
+              </div>
             </div>
-            <div>
-      </div>
+            <div class="energyBoost">
+                <div class="imgEnergyBoost">
+                    <img src="assets/energyBoost.png"><img>
+                </div>
+                <button class="buyEnergyBoost" onclick="buyClickEnergyFunc()">Купить <br><div class="priceEnergy">за 500</div></br></button>
+                <div class="textEnergyBoost">
+                    <p>Увеличивает энергию ударов +500</p>
+                </div>
+            </div>      
+        
+            <div class="autoClick">     
+                <div class="imgAutoClick"> 
+                    <img src="assets/autoClick.png"><img>
+                </div>
+                <button class="buyAutoClick" onclick="buyAutoClick()">Купить за 50000</button>
+                <div class="textAutoClick">
+                    <p>Бьет рубль пока ты спишь</p>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
-    <div class="energyBoost">
-        <div class="imgEnergyBoost">
-            <img src="assets/energyBoost.png"><img>
-        </div>
-        <button class="buyEnergyBoost" onclick="buyClickEnergyFunc()">Купить <br><div class="priceEnergy">за 500</div></br></button>
-        <div class="textEnergyBoost">
-            <p>Увеличивает энергию ударов +500</p>
-        </div>
-    </div>      
 
-    <div class="autoClick">     
-        <div class="imgAutoClick"> 
-            <img src="assets/autoClick.png"><img>
-        </div>
-        <button class="buyAutoClick" onclick="buyAutoClick()">Купить за 50000</button>
-        <div class="textAutoClick">
-            <p>Бьет рубль пока ты спишь</p>
+    <!-- Modal for Stats button -->
+    <div id="myStatsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Статистика любаваться</h2>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content here -->
+            </div>
         </div>
     </div>
+
+    <!-- Modal for Earn button -->
+    <div id="myEarnModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Задания делать рубль получать</h2>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Invite button -->
+    <div id="myInviteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Друзья приглашать деньга получать</h2>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content here -->
+            </div>
+        </div>
+    </div>
+
     <script src="indehtml.js"></script>
-  </div>
-  </div>
-  </div>
 </body>
 </html>
