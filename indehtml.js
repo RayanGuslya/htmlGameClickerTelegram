@@ -4,6 +4,15 @@ let maxEnergy = 1500;
 let priceBoostClick = 250;
 let priceBoostEnergy = 500;
 let restart = true;
+document.querySelectorAll('.btn').forEach(function(button) {
+  button.addEventListener('touchstart', function() {
+      button.classList.add('active');
+  });
+
+  button.addEventListener('touchend', function() {
+      button.classList.remove('active');
+  });
+});
 //востановление энергии
 function energyHill() {
   let energyLimitElement = document.querySelector(".energyLimit");

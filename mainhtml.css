@@ -92,36 +92,36 @@ div.inviteButton{
 }
 div.moneyCircleDiv{
     position: absolute;
+    border: none;
     margin: auto;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    width: 16em;
-    height: 16em;
+    width: 18em;
+    height: 18em;
 }
 .btn {
-    background: none;
-    outline:none;
-    border: none;
-    cursor: pointer;
-    display: block;
-    position: relative;
-    font-size: 16px;
-    font-weight: 300px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0 auto;
-    border-radius: 20px;
-  }
-  .btn:hover {
-    top: 2px;
-  }
-  
-  .btn:active {
-    box-shadow: none;
-    top: 6px;
-  }
+  margin: 0;
+  border: none;
+  padding: 35px;
+  transition: all 0.25s ease;
+}
+
+.btn:focus, .btn:active {
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  color: #ccc;
+}
+.btn.active {
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  color: #ccc;
+}
 div.moneyCircleDiv img{
     max-width:100%;
     max-height:100%;
